@@ -29,6 +29,7 @@ stage("Unit testing"){
         echo "this is unit testing"
     }
 }
+}
 stage("Read file"){
     steps{
        script{
