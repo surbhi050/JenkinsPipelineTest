@@ -54,6 +54,7 @@ stage("integration testing"){
             
         }
         success {
+            Build(job:Android_Project_AzureRepo)
             echo 'I succeeded!'
         }
         unstable {
