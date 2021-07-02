@@ -27,8 +27,8 @@ stage("Unit testing"){
            def data="toda's date is"+date
         writeFile(file: 'zorg.txt', text: data)
         echo "this is unit testing"
+       }
     }
-}
 }
 stage("Read file"){
     steps{
@@ -38,8 +38,16 @@ stage("Read file"){
        }
         
     }
+    post{
+
+Always{
+    echo "build successfull"
+}
+
+    }
     
 }
+
 
 stage("integration testing"){
     steps{
