@@ -28,6 +28,7 @@ stage("Unit testing"){
 }
 stage("integration testing"){
     steps{
+        archiveArtifacts 'zorg.txt'
         echo "this is integration testing"
     }
 }
