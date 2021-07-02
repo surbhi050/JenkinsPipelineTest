@@ -10,7 +10,7 @@ stage("first stage"){
     steps{
         echo "This is second stage"
     }
-
+    }
      stage("third  stage"){
          
     steps{
@@ -22,5 +22,4 @@ stage("first stage"){
 
     }
         
-}
 }
