@@ -17,6 +17,7 @@ stage("first stage"){
         input("proced for deployment")
         echo "This is second stage"
     }
+     }
     stage("Testing"){
 parellel{
 stage("Unit testing"){
@@ -37,9 +38,3 @@ stage("integration testing"){
 
 
     }
-}
-
-
-    }
-        
-}
