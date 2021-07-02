@@ -38,13 +38,7 @@ stage("Read file"){
        }
         
     }
-    post{
-
-Always{
-    echo "build successfull"
-}
-
-    }
+   
     
 }
 
@@ -53,6 +47,24 @@ stage("integration testing"){
     steps{
         archiveArtifacts 'zorg.txt'
         echo "this is integration testing"
+    }
+    post{
+    always {
+            echo 'always section'
+            
+        }
+        success {
+            echo 'I succeeded!'
+        }
+        unstable {
+            echo 'I am unstable :/'
+        }
+        failure {
+            echo 'I failed :('
+        }
+        changed {
+            echo 'Things were different before...'
+        }
     }
 }
 }
