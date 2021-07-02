@@ -29,10 +29,11 @@ stage("Unit testing"){
 }
 stage("Read file"){
     steps{
-       
+       script{
        def readfile = readFile(file: 'zorg.txt')
        println(readfile)
-        echo "this is unit testing"
+       }
+        
     }
 }
 stage("integration testing"){
