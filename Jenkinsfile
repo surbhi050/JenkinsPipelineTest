@@ -22,8 +22,10 @@ stage("first stage"){
 parallel {
 stage("Unit testing"){
     steps{
-       
-        writeFile(file: 'zorg.txt', text: "this is new text file")
+       script{
+           def date=new Date()
+           def data="toda's date is"+date
+        writeFile(file: 'zorg.txt', text: data)
         echo "this is unit testing"
     }
 }
@@ -35,7 +37,9 @@ stage("Read file"){
        }
         
     }
+    
 }
+
 stage("integration testing"){
     steps{
         archiveArtifacts 'zorg.txt'
