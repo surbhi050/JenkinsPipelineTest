@@ -22,7 +22,9 @@ stage("first stage"){
 parallel {
 stage("Unit testing"){
     steps{
-        writeFile(file: 'zorg.txt', text: "this is automated file")
+        def date=new date()
+        def data="today's date is "+date
+        writeFile(file: 'zorg.txt', text: data)
         echo "this is unit testing"
     }
 }
