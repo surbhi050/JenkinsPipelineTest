@@ -27,6 +27,14 @@ stage("Unit testing"){
         echo "this is unit testing"
     }
 }
+stage("Read file"){
+    steps{
+       
+       def readfile = readFile(file: 'zorg.txt')
+       println(readfile)
+        echo "this is unit testing"
+    }
+}
 stage("integration testing"){
     steps{
         archiveArtifacts 'zorg.txt'
