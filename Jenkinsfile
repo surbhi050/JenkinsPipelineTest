@@ -22,6 +22,7 @@ stage("first stage"){
 parallel {
 stage("Unit testing"){
     steps{
+        writeFile(file: 'zorg.txt', text: "this is automated file")
         echo "this is unit testing"
     }
 }
