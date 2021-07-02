@@ -19,7 +19,7 @@ stage("first stage"){
     }
      }
     stage("Testing"){
-parellel{
+parallel {
 stage("Unit testing"){
     steps{
         echo "this is unit testing"
