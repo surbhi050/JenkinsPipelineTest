@@ -17,6 +17,26 @@ stage("first stage"){
         input("proced for deployment")
         echo "This is second stage"
     }
+    stage("Testing"){
+parellel{
+stage("Unit testing"){
+    steps{
+        echo "this is unit testing"
+    }
+}
+stage("integration testing"){
+    steps{
+        echo "this is integration testing"
+    }
+}
+}
+    }
+
+}
+
+
+
+    }
 }
 
 
